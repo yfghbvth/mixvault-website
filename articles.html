@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="mixvault — статьи о сведении, звуке и плагинах. практика, а не теория.">
+  <meta name="keywords" content="сведение, звук, плагины, fl studio, vst, ambient, статьи, гайды">
+  <title>mixvault / статьи</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>mixvault</h1>
+  <nav>
+  <a href="/index.html">главная</a>
+  <a href="/articles.html" class="active">статьи</a>
+  <a href="/plugins.html">плагины</a>
+  <a href="/knowledge-base.html">база знаний</a>
+  <a href="/tools.html">инструменты</a>
+  <a href="/about.html">о проекте</a>
+  </nav>
+</header>
+
+  <main>
+    <section class="intro">
+      <p>статьи о звуке, сведении и <span class="accent">всём</span>, что находится между.</p>
+    </section>
+
+    <section class="post">
+      <h2>все статьи</h2>
+      
+      <article>
+        <h3>как выжать громкость, не убив динамику</h3>
+        <p>сведение — это не борьба с лимитером, а работа с компрессором. смотри гайд и не перегрей мастер-шину.</p>
+        <a href="articles/article-loudness.html">читать →</a>
+      </article>
+
+      <article>
+        <h3>реверберация: как не утопить вокал</h3>
+        <p>правила работы с пространством: от малого room до бесконечного hall. расставляем акценты, а не создаём кашу.</p>
+        <a href="articles/article-reverb.html">читать →</a>
+      </article>
+
+      <article>
+        <h3>10 бесплатных VST, которые не стыдно использовать</h3>
+        <p>подборка плагинов, которые звучат не хуже платных аналогов. эквалайзеры, компрессоры, реверы — всё за 0 рублей.</p>
+        <a href="articles/article-vst.html">читать →</a>
+      </article>
+
+      <article>
+        <h3>сведение в наушниках: мифы и реальность</h3>
+        <p>можно ли сделать коммерческий звук без студийных мониторов. работаем с тем, что есть, а не с тем, что хочется.</p>
+        <a href="articles/article-headphones.html">читать →</a>
+      </article>
+    </section>
+  </main>
+
+<div class="stats">
+  посетителей всего: <span id="u"></span><br>
+  сейчас онлайн: <span id="o"></span>
+</div>
+
+<script>
+fetch('/counter.php')
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById("u").innerText = data.unique;
+    document.getElementById("o").innerText = data.online;
+  });
+</script>
+
+  <footer>
+    <p>mixvault © 2025 / sound has no borders</p>
+  </footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5J4GXQE0R2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5J4GXQE0R2');
+</script>
+
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105115860', 'ym');
+
+    ym(105115860, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/105115860" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+</body>
+</html>

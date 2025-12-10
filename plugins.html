@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="mixvault — коллекция проверенных плагинов для сведения. бесплатные и бюджетные VST.">
+  <meta name="keywords" content="плагины, VST, сведение, бесплатные, компрессор, эквалайзер, реверб">
+  <title>mixvault / плагины</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>mixvault</h1>
+  <nav>
+    <a href="/index.html">главная</a>
+    <a href="/articles.html">статьи</a>
+    <a href="/plugins.html" class="active">плагины</a>
+    <a href="/knowledge-base.html">база знаний</a>
+    <a href="/tools.html">инструменты</a>
+    <a href="/about.html">о проекте</a>
+  </nav>
+</header>
+
+  <main>
+    <section class="intro">
+      <p>коллекция плагинов, которые <span class="accent">реально работают</span>. проверено в бою.</p>
+    </section>
+
+    <section class="post">
+      <h2>бесплатные VST</h2>
+      
+      <article>
+        <h3>vital • синтезатор</h3>
+        <p>мощный wavetable-синтезатор с невероятными возможностями. то, что serum мог бы быть, если бы был бесплатным.</p>
+        <a href="https://vital.audio" target="_blank">скачать →</a>
+      </article>
+
+      <article>
+        <h3>valhalla supermassive • эффекты</h3>
+        <p>безумные дилеи и реверберации от легендарных разработчиков. для тех, кто любит глубокий космос в звуке.</p>
+        <a href="https://valhalladsp.com/shop/reverb/valhalla-supermassive/" target="_blank">скачать →</a>
+      </article>
+
+      <article>
+        <h3>voxengo span • анализатор</h3>
+        <p>точный спектральный анализатор, который должен быть в каждом проекте. видишь то, что не слышишь.</p>
+        <a href="https://www.voxengo.com/product/span/" target="_blank">скачать →</a>
+      </article>
+    </section>
+
+    <section class="post">
+      <h2>бюджетные плагины</h2>
+      
+      <article>
+        <h3>toneboosters bundle • пакет</h3>
+        <p>набор из 30+ плагинов за смешные деньги. эквалайзеры, компрессоры, лимитеры — всё, что нужно для сведения.</p>
+        <a href="https://www.toneboosters.com/tb_bundle_v4.html" target="_blank">купить →</a>
+      </article>
+
+      <article>
+        <h3>melda production free bundle</h3>
+        <p>огромный набор бесплатных плагинов от серьёзной компании. идеальный старт для домашней студии.</p>
+        <a href="https://www.meldaproduction.com/download/plugins" target="_blank">скачать →</a>
+      </article>
+
+      <article>
+        <h3>airwindows • консольные эмуляции</h3>
+        <p>уникальные плагины, которые имитируют звук аналоговых консолей. один разработчик, десятки бесплатных инструментов.</p>
+        <a href="https://www.airwindows.com/" target="_blank">перейти →</a>
+      </article>
+    </section>
+  </main>
+
+<div class="stats">
+  посетителей всего: <span id="u"></span><br>
+  сейчас онлайн: <span id="o"></span>
+</div>
+
+<script>
+fetch('/counter.php')
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById("u").innerText = data.unique;
+    document.getElementById("o").innerText = data.online;
+  });
+</script>
+
+  <footer>
+    <p>mixvault © 2025 / sound has no borders</p>
+  </footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5J4GXQE0R2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5J4GXQE0R2');
+</script>
+
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105115860', 'ym');
+
+    ym(105115860, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/105115860" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+</body>
+</html>

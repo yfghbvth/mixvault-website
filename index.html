@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="mixvault — статьи о сведении, звуке и плагинах. практика, а не теория.">
+  <meta name="keywords" content="сведение, звук, плагины, fl studio, vst, ambient, статьи, гайды">
+  <title>mixvault / главная</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>mixvault</h1>
+  <nav>
+    <a href="/index.html" class="active">главная</a>
+    <a href="/articles.html">статьи</a>
+    <a href="/plugins.html">плагины</a>
+    <a href="/knowledge-base.html">база знаний</a>
+    <a href="/tools.html">инструменты</a>
+    <a href="/about.html">о проекте</a>
+  </nav>
+</header>
+
+  <main>
+    <section class="intro">
+      <p><span class="accent">mixvault</span> — пространство для тех, кто хочет разобраться в звуке. 
+      без сложных терминов, только практика.</p>
+    </section>
+
+    <section class="post">
+      <h2>разделы</h2>
+      
+      <article class="nav-card">
+        <h3>📝 статьи</h3>
+        <p>практические руководства по сведению, работе с плагинами и созданию звука. от основ до продвинутых техник.</p>
+        <a href="articles.html" class="card-link">перейти к статьям →</a>
+      </article>
+
+      <article class="nav-card">
+        <h3>🎛️ плагины</h3>
+        <p>коллекция проверенных VST плагинов — бесплатных и бюджетных. только то, что реально работает.</p>
+        <a href="plugins.html" class="card-link">смотреть плагины →</a>
+      </article>
+
+      <article class="nav-card">
+        <h3>💡 база знаний</h3>
+        <p>основные понятия, термины и принципы работы со звуком. для тех, кто только начинает путь.</p>
+        <a href="knowledge-base.html" class="card-link">изучить базу →</a>
+      </article>
+
+      <article class="nav-card">
+        <h3>🔧 инструменты</h3>
+        <p>полезные онлайн-инструменты для работы со звуком: метрономы, тюнеры, генераторы частот.</p>
+        <a href="tools.html" class="card-link">использовать →</a>
+      </article>
+    </section>
+
+    <section class="post">
+      <h2>популярное</h2>
+      <div class="quick-links">
+        <a href="articles/article-loudness.html" class="quick-link">🔊 основы компрессии</a>
+        <a href="plugins.html#free" class="quick-link">🆓 топ бесплатных VST</a>
+        <a href="tools.html" class="quick-link">🔧 онлайн-инструменты, помогающие в процессе</a>
+        <a href="knowledge-base.html" class="quick-link">📖 база знаний для новичков</a>
+      </div>
+    </section>
+  </main>
+
+<div class="stats">
+  посетителей всего: <span id="u"></span><br>
+  сейчас онлайн: <span id="o"></span>
+</div>
+
+<script>
+fetch('/counter.php')
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById("u").innerText = data.unique;
+    document.getElementById("o").innerText = data.online;
+  });
+</script>
+
+  <footer>
+    <p>mixvault © 2025 / sound has no borders</p>
+  </footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5J4GXQE0R2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5J4GXQE0R2');
+</script>
+
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105115860', 'ym');
+
+    ym(105115860, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/105115860" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+</body>
+</html>

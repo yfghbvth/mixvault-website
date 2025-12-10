@@ -1,0 +1,22 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /logs/
+Disallow: /cgi-bin/
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+Sitemap: https://mixing.web-prj.ru/sitemap.xml

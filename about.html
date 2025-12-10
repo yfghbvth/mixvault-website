@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="mixvault — сообщество о сведении музыки. обмен знаниями, плагинами и опытом.">
+  <meta name="keywords" content="сведение, звук, плагины, fl studio, vst, сообщество, микс">
+  <title>mixvault / о проекте</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>mixvault</h1>
+  <nav>
+    <a href="/index.html">главная</a>
+    <a href="/articles.html">статьи</a>
+    <a href="/plugins.html">плагины</a>
+    <a href="/knowledge-base.html">база знаний</a>
+    <a href="/tools.html">инструменты</a>
+    <a href="/about.html" class="active">о проекте</a>
+  </nav>
+</header>
+
+  <main>
+    <section class="intro">
+      <p><span class="accent">mixvault</span> — это сообщество, а не просто сайт. место, где можно найти ответы и не только.</p>
+    </section>
+
+    <section class="post">
+      <h2>философия</h2>
+      
+      <article>
+        <h3>почему mixvault?</h3>
+        <p>потому что хорошее сведение не должно быть секретом за семью печатями. я верю в обмен знаниями, а не в их продажу. именно поэтому я и создал данный веб-сайт, куда выгружаю свой накопленный опыт в формате статей и добавляю те материалы, которые сам использую в работе.</p>
+      </article>
+
+      <article>
+        <h3>для кого это?</h3>
+        <p>для тех, кто хочет разобраться в звуке, но не готов платить десятки тысяч рублей за курсы. для энтузиастов, ассистентов и самоучек. не у каждого найдутся деньги на обучение, но это не проблема — именно для этого и существует данный ресурс.</p>
+      </article>
+
+      <article>
+        <h3>что внутри?</h3>
+        <p>статьи, которые пишет практик, а не теоретик. подборки плагинов, которые реально работают. лаконичная база знаний, которая действительно помогает. сборник информации, подтверждённой многолетним опытом работы со звуком.</p>
+      </article>
+    </section>
+
+    <section class="post">
+      <h2>контакты</h2>
+      <article>
+        <p>есть, чем поделиться? нашли ошибку? хотите предложить тему?</p>
+        <p>пишите: <a href="mailto:mixingadmin@mixing.web-prj.ru">mixingadmin@mixing.web-prj.ru</a></p>
+      </article>
+    </section>
+  </main>
+
+<div class="stats">
+  посетителей всего: <span id="u"></span><br>
+  сейчас онлайн: <span id="o"></span>
+</div>
+
+<script>
+fetch('/counter.php')
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById("u").innerText = data.unique;
+    document.getElementById("o").innerText = data.online;
+  });
+</script>
+
+  <footer>
+    <p>mixvault © 2025 / sound has no borders</p>
+  </footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5J4GXQE0R2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5J4GXQE0R2');
+</script>
+
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105115860', 'ym');
+
+    ym(105115860, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/105115860" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+</body>
+</html>

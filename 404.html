@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mixvault / 404</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .error-content {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .error-code {
+      font-size: 4em;
+      color: #00ffff;
+      margin-bottom: 20px;
+    }
+    .error-message {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      color: #aaa;
+    }
+    .home-link {
+      display: inline-block;
+      padding: 12px 30px;
+      background: rgba(0, 255, 255, 0.1);
+      border: 1px solid #00ffff;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #00ffff;
+      transition: 0.3s;
+    }
+    .home-link:hover {
+      background: rgba(0, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>mixvault</h1>
+  <nav>
+    <a href="/index.html">главная</a>
+    <a href="/articles.html">статьи</a>
+    <a href="/plugins.html">плагины</a>
+    <a href="/knowledge-base.html">база знаний</a>
+    <a href="/tools.html">инструменты</a>
+    <a href="/about.html">о проекте</a>
+  </nav>
+</header>
+
+  <main>
+    <section class="error-content">
+      <div class="error-code">404</div>
+      <p class="error-message">кажется, мы потеряли звук этой страницы...</p>
+      <a href="index.html" class="home-link">вернуться на главную</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>mixvault © 2025 / sound has no borders</p>
+  </footer>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = 'index.html';
+    }, 5000);
+  </script>
+
+</body>
+</html>
