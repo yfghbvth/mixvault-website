@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="реверберация без утопления вокала. практическое руководство.">
+  <title>mixvault / как использовать реверб, не утопив вокал</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/style.css">
+<style>
+@media screen and (max-width: 768px) {
+    /* Запрещаем картинкам ломать верстку */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    
+    /* Фиксируем контейнер */
+    .full-article, main, article {
+        max-width: 100% !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    /* Улучшаем навигацию */
+    header nav {
+        flex-wrap: wrap;
+        gap: 5px;
+        font-size: 14px;
+    }
+    
+    /* Статистику в столбик */
+    .stats {
+        display: block !important;
+        text-align: center;
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>mixvault</h1>
+  <nav>
+    <a href="/index.html">главная</a>
+    <a href="/articles.html">статьи</a>
+    <a href="/plugins.html">плагины</a>
+    <a href="/knowledge-base.html">база знаний</a>
+    <a href="/tools.html">инструменты</a>
+    <a href="/about.html">о проекте</a>
+  </nav>
+</header>
+
+<main>
+  <article class="full-article">
+
+    <h1>как использовать реверб, не утопив вокал</h1>
+
+    <!-- cover image -->
+    <figure>
+      <img src="../images/reverb/cover.jpg" alt="реверберация и глубина вокала" class="article-img">
+      <figcaption>реверб может как усилить эмоцию, так и уничтожить читаемость вокала.</figcaption>
+    </figure>
+
+    <p>
+      реверб — один из самых выразительных инструментов в вокальном миксе. он создаёт пространство, глубину
+      и атмосферу, но при неправильных настройках легко делает вокал дальним, мутным и утонувшим в хвосте.
+      чтобы этого избежать, важно понимать три ключевых параметра: глубину реверба, преддилей и частотную
+      структуру хвоста.
+    </p>
+
+    <h2>глубина реверба</h2>
+
+    <figure>
+      <img src="../images/reverb/depth.jpg" alt="глубина реверба" class="article-img">
+      <figcaption>глубина задаёт ощущение расстояния между голосом и отражениями.</figcaption>
+    </figure>
+
+    <p>
+      глубина определяет, насколько далеко кажется вокал. увеличивая decay или плотность хвоста, ты буквально
+      отталкиваешь голос назад в пространстве. это может быть полезно художественно, но часто приводит к тому,
+      что вокал перестаёт быть центром микса.
+    </p>
+
+    <p>
+      чтобы голос остался впереди, держи decay в пределах 0.7–1.8 секунд и избегай чрезмерно плотного хвоста.
+      чем прозрачнее реверб, тем легче вокал остаётся читаемым.
+    </p>
+
+    <h2>преддилей</h2>
+
+    <figure>
+      <img src="../images/reverb/pre-delay.jpg" alt="преддилей и разделение вокала и хвоста" class="article-img">
+      <figcaption>преддилей даёт вокалу время «подышать» до начала хвоста.</figcaption>
+    </figure>
+
+    <p>
+      преддилей — задержка между прямым сигналом и стартом реверберации. он отделяет вокал от хвоста,
+      сохраняя атаку и близость. маленькие значения делают звук слитным, большие — добавляют воздушность.
+    </p>
+
+    <p>
+      преддилей 10–30 мс — идеальный диапазон, если хочешь яркий и читаемый вокал.  
+      30–60 мс создают современное «воздушное» звучание с сохранённой атакой.  
+      0–10 мс подойдут для интимных, мягких партий, но есть риск сделать звук мутным.
+    </p>
+
+    <h2>частоты хвоста</h2>
+
+    <p>
+      хвост реверба редко должен быть широкополосным. низкие частоты до 150–300 гц лучше срезать, чтобы
+      избежать бубнения, а высокие — ограничить в диапазоне 6–10 кгц, чтобы хвост не хрипел и не шипел.
+    </p>
+
+    <p>
+      фильтры позволяют сохранить прозрачность: оставляешь только то, что полезно для пространства, не мешая
+      разборчивости вокала.
+    </p>
+
+    <h2>какой реверб выбрать</h2>
+
+    <p>три самых популярных варианта для вокала:</p>
+
+    <ul>
+      <li><b>hall</b> — атмосферно и широко. подходит для баллад и эпичных аранжировок.</li>
+      <li><b>plate</b> — плотный, яркий и читаемый хвост. классика для современного вокала.</li>
+      <li><b>room</b> — лёгкое, естественное пространство без лишней глубины.</li>
+    </ul>
+
+    <p>
+      часто используют два реверба одновременно: короткий plate для близости и тихий hall для атмосферы.
+      это создаёт объём, не убивая ясность.
+    </p>
+
+    <h2>как не утопить вокал</h2>
+
+    <p>несколько простых правил:</p>
+
+    <ul>
+      <li>держи decay в пределах 0.8–1.8 секунд;</li>
+      <li>преддилей 10–40 мс — почти всегда безопасный выбор;</li>
+      <li>срезай низ ниже 150–250 гц;</li>
+	  <li>ограничивай верх выше 6–10 кгц;</li>
+      <li>не завышай mix — лучше чуть меньше, чем чуть больше.</li>
+    </ul>
+
+    <p>
+      реверб — это не украшение, а инструмент пространства. его задача — раскрывать вокал, а не прятать его.
+      чем аккуратнее настройки, тем живее и эмоциональнее звучит голос.
+    </p>
+
+  </article>
+</main>
+
+<div class="stats">
+  посетителей всего: <span id="u"></span><br>
+  сейчас онлайн: <span id="o"></span>
+</div>
+
+<script>
+fetch('/counter.php')
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById("u").innerText = data.unique;
+    document.getElementById("o").innerText = data.online;
+  });
+</script>
+
+<footer>
+  <p>mixvault © 2025 / sound has no borders</p>
+</footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5J4GXQE0R2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5J4GXQE0R2');
+</script>
+
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105115860', 'ym');
+
+    ym(105115860, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/105115860" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+</body>
+</html>

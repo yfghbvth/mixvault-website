@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="как сделать громкий, но динамичный микс. практическое руководство.">
+  <title>mixvault / как выжать громкость, не убив динамику</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/style.css">
+<style>
+@media screen and (max-width: 768px) {
+    /* Запрещаем картинкам ломать верстку */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    
+    .full-article, main, article {
+        max-width: 100% !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    header nav {
+        flex-wrap: wrap;
+        gap: 5px;
+        font-size: 14px;
+    }
+    
+    .stats {
+        display: block !important;
+        text-align: center;
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>mixvault</h1>
+  <nav>
+    <a href="/index.html">главная</a>
+    <a href="/articles.html">статьи</a>
+    <a href="/plugins.html">плагины</a>
+    <a href="/knowledge-base.html">база знаний</a>
+    <a href="/tools.html">инструменты</a>
+    <a href="/about.html">о проекте</a>
+  </nav>
+</header>
+
+<main>
+  <article class="full-article">
+
+    <h1>как выжать громкость, не убив динамику</h1>
+
+    <!-- cover image -->
+    <figure>
+      <img src="../images/compression/cover_compression.jpg" alt="громкость без потери динамики" class="article-img">
+      <figcaption>громкость не равна качеству. но качество без громкости никто не услышит.</figcaption>
+    </figure>
+
+    <p>
+      громкость — не про войну с лимитером, как многие могли бы подумать: громкость — про порядок в цепочке, контроль транзиентов (этим именуются кратковременные "вспышки" звука)
+      и уважение к динамике. мастер-шина не должна быть полем боя. она должна быть логичным финалом
+      работы над миксом.
+    </p>
+
+    <p>
+      если ты выкручиваешь frontier (а это, кстати, гость нашей статьи) или любой другой лимитер до состояния «пусть давит, я потом выровняю» —
+      увы, ты уже проиграл. лимитер — последний штрих, а не дубина, которой надо бить микс.
+    </p>
+
+    <h2>правильная цепочка — половина результата. пример ниже:</h2>
+
+    <figure>
+      <img src="../images/compression/gain-stage.jpg"
+           alt="эквалайзер, компрессор и лимитер в правильной цепочке"
+           class="article-img">
+      <figcaption>eq → compressor → limiter. порядок важнее, чем кажется.</figcaption>
+    </figure>
+
+    <p>
+      громкость не появляется из ниоткуда. она накапливается на каждом этапе:
+    </p>
+
+    <ul>
+      <li><b>eq</b> убирает то, что мешает компрессору работать чисто</li>
+      <li><b>compressor</b> сглаживает пики, но не убивает жизнь</li>
+      <li><b>limiter</b> ставит потолок и защищает звук</li>
+    </ul>
+
+    <p>
+      если компрессор работает на 0.5 дб, а лимитер давит на 6 — это ок.
+      если компрессор давит на 6, а лимитер на 0.5 — ты делаешь саундтрек к лифту.
+    </p>
+
+    <h2>пример: frontier от d16 group</h2>
+
+    <figure>
+      <img src="../images/compression/limiter-gr.jpg"
+           alt="интерфейс frontier с gain reduction"
+           class="article-img">
+      <figcaption>главное — показания reduction (зеленый экранчик со стрелкой, которая показывает, сколько децибел убирается), а не цифры на выходе.</figcaption>
+    </figure>
+
+    <p>
+      frontier — хороший пример честного лимитера. минимум визуального мусора,
+      максимум полезных параметров:
+    </p>
+
+    <ul>
+      <li><b>threshold</b> — главный регулятор количества воздействия. ниже — сильнее сжимает.</li>
+      <li><b>release</b> — определяет, насколько плавно лимитер отпускает хвост транзиента.</li>
+      <li><b>soft clip</b> — немного искажает пики до лимитера. помогает экономить 1–2 дб гр.</li>
+      <li><b>control input</b> — четыре алгоритма для разных задач.</li>
+      <li><b>output level</b> — конечная громкость. оставляй запас: -0.8 или -1 дб.</li>
+    </ul>
+
+    <h2>как получить громкость без каши</h2>
+
+    <p>
+      1) наведи порядок в миксе. громкость начинается на уровне треков, а не мастера.  
+      2) подчисти низ eq — грязный низ съедает до 3 дб громкости.  
+      3) скомпрессируй по чуть-чуть, но часто, а не один раз и жестко.  
+      4) оставь 3–6 дб транзиентам — ухо любит жизнь.  
+      5) лимитируй только пики, а не музыку целиком.
+    </p>
+
+    <h2>ориентир — gain reduction, а не loudness meter</h2>
+
+    <p>
+      если frontier показывает -2…-4 дб reduction и не хрипит — ты попал.  
+      если показывает -8 и звучит ок — поздравляю, у тебя крутой микс.  
+      если при -3 всё сыпется — микс надо чинить, а не лимитер менять.
+    </p>
+
+    <p>
+      громкость — это не насилие над мастером. это аккуратность над миксом.  
+      а хороший лимитер — просто точка в конце предложения.
+    </p>
+	</article>
+</main>
+
+<div class="stats">
+  посетителей всего: <span id="u"></span><br>
+  сейчас онлайн: <span id="o"></span>
+</div>
+
+<script>
+fetch('/counter.php')
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById("u").innerText = data.unique;
+    document.getElementById("o").innerText = data.online;
+  });
+</script>
+
+<footer>
+  <p>mixvault © 2025 / sound has no borders</p>
+</footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5J4GXQE0R2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5J4GXQE0R2');
+</script>
+
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105115860', 'ym');
+
+    ym(105115860, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/105115860" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+</body>
+</html>
